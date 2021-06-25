@@ -1,0 +1,28 @@
+<footer>
+    <a href="#" class="go-up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <div class="footer-item name">
+        Reni Kartika
+    </div>
+    <div class="sosmed footer-item">
+        <a href="mailto:reni.hnl@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/reni-kartika/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.kaggle.com/renikartika" target="_blank"><i class="fab fa-kaggle"></i></a>
+        <a href="https://github.com/ReniKartika7" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer-item credit">
+        &copy; 2021 by Reni Kartika
+    </div>
+</footer>
+
+<script>
+    const goUp = document.querySelector(".go-up");
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 1500) {
+            goUp.classList.add("active");
+        } else {
+            goUp.classList.remove("active");
+        }
+    })
+</script>

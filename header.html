@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <ul class="navbar-content" id="navbar-content">
+        <li class="navbar-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="navbar-item">
+            <a href="aboutme.html">About Me</a>
+        </li>
+        <li class="navbar-item">
+            <a href="portfolio.html">Project</a>
+        </li>
+        <li class="navbar-item">
+            <a href="contact.html">Contact</a>
+        </li>
+        
+        <a href="javascript:void(0);" class="icon" onclick="navbar_responsive()"><i class="fa fa-bars"></i></a>
+    </ul>
+</nav>
+
+<script>
+    $(function(){
+        var current = location.pathname;
+        current = current.substring(1, current.length-5);
+        $('#navbar-content li a').each(function(){
+            var $this = $(this);
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active-navbar');
+            }
+        })
+    })
+
+    function navbar_responsive() {
+        var x = document.getElementById("navbar-content");
+        if (x.className === "navbar-content") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar-content";
+        }
+    }
+</script>
